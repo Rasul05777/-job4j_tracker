@@ -12,3 +12,4 @@ public class College {
         System.out.println("ФИО : " + student.getFullName() + ", группа : " + student.getGroup() + ", дата поступления : " + student.getReceipt());
     }
 }
+

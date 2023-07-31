@@ -1,5 +1,7 @@
 package ru.job4j.pojo;
+
 import java.util.Date;
+
 public class Student {
     private String fullName;
     private int group;
@@ -8,6 +10,7 @@ public class Student {
     public String getFullName() {
         return fullName;
     }
+
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
