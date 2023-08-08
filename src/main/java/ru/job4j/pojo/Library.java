@@ -16,27 +16,17 @@ public class Library {
             System.out.println(bk.getName() + " - " + bk.getPages());
         }
         System.out.println("Replace java to clean");
-        Book[] i = new Book[1];
-        i[0] = java;
         books[0] = clean;
-        books[3] = i[0];
+        books[3] = java;
         for (int j = 0; j < books.length; j++) {
             Book a = books[j];
             System.out.println(a.getName() + " - " + a.getPages());
         }
         System.out.println("Books with name : Clean code");
-        if (java.equals("Clean code")) {
-            System.out.println(java);
+        for (Book j : books) {
+            if("Clean code".equals(j.getName())) {
+                System.out.println(j.getName() + " - " + j.getPages());
+            }
         }
-        if (python.equals("Clean code")) {
-            System.out.println(python);
-        }
-        if (javascript.equals("Clean code")) {
-            System.out.println(javascript);
-        }
-        if (clean.equals("Clean code")) {
-            System.out.println(clean);
-        }
-
     }
 }
