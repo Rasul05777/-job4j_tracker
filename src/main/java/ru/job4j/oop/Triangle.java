@@ -1,6 +1,6 @@
-package ru.job4j.tracker.oop;
+package ru.job4j.oop;
 
-import static java.lang.Math.sqrt;
+import ru.job4j.oop.Point;
 
 public class Triangle {
     private Point first;
