@@ -41,7 +41,7 @@ public class Tracker {
             items[index] = item;
             return true;
         }
-            return false;
+        return false;
     }
 
     private int indexOf(int id) {

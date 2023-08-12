@@ -75,4 +75,3 @@ public class TrackerTest {
         assertThat(result).isFalse();
     }
 }
-
