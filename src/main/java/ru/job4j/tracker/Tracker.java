@@ -39,7 +39,7 @@ public class Tracker {
         int start = index + 1;
         int distPos = index;
         int length = size - index - 1;
-        if(index != -1) {
+        if (index != -1) {
             System.arraycopy(items, start, items, distPos, length);
             items[size - 1] = null;
             size--;
