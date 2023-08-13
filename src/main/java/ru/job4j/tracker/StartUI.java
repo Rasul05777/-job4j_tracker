@@ -4,9 +4,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI extends Item {
     public static void main(String[] args) {
-        Item item = new Item();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        String i = item.getCreated().format(formatter);
-        System.out.println(i);
+        Item item = new Item("User", 1);
+        System.out.println(item);
     }
 }
