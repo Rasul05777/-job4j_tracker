@@ -13,6 +13,7 @@ public class MagicBall {
             case 0 -> System.out.println("Да");
             case 1 -> System.out.println("Нет");
             default -> System.out.println("Может быть");
-        };
+        }
+        ;
     }
 }
