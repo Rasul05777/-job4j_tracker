@@ -16,4 +16,3 @@ public class Bus implements Transport {
         return money;
     }
 }
-

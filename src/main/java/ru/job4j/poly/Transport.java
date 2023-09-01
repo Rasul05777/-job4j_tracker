@@ -8,4 +8,3 @@ public interface Transport {
     int refuel(int fuel, int money);
 
 }
-
