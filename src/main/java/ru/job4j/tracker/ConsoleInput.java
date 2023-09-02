@@ -14,3 +14,4 @@ public class ConsoleInput implements Input {
         return Integer.parseInt(askStr(question));
     }
 }
+
