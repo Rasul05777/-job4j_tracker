@@ -6,7 +6,7 @@ public class Main {
     Vehicle bus = new Bus();
     Vehicle train = new Train();
     Vehicle[] vehicles = new Vehicle[] {airplane, bus, train};
-    for(Vehicle a : vehicles) {
+    for (Vehicle a : vehicles) {
         a.move();
     }
     }
