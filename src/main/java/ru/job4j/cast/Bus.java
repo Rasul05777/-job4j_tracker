@@ -6,4 +6,3 @@ public class Bus implements Vehicle {
         System.out.println("Автобус передвигается  по скоростным трассам");
     }
 }
-
