@@ -12,9 +12,8 @@ public class Bus implements Transport {
     }
 
     @Override
-    public int refuel(int fuel, int money) {
-        System.out.println("Было заправлено  " + fuel + " литров");
-        return money;
+    public int refuel(int fuel) {
+        return fuel * money;
     }
 
 }
