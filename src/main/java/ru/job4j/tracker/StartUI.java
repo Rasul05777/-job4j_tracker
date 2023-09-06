@@ -42,7 +42,7 @@ public class StartUI {
         System.out.println((item == null ? "Заявка удалена успешно" : "Ошибка удалении заявки"));
     }
 
-    public static int findIdItem(Input input, Tracker tracker) {
+    public static void findIdItem(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ===");
         int id = input.askInt("Enter id ");
         Item item = tracker.findById(id);
@@ -51,10 +51,9 @@ public class StartUI {
         } else {
             System.out.println("Заявка с введеным id: " + id + " не найдена");
         }
-        return id;
     }
 
-    public static int findNameItem(Input input, Tracker tracker) {
+    public static void findNameItem(Input input, Tracker tracker) {
         System.out.println("=== Find item by name ===");
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
@@ -65,8 +64,6 @@ public class StartUI {
         } else {
             System.out.println("Заявок с именем " + name + " не найдено");
         }
-
-        return 0;
     }
 
     public void init(Input input, Tracker tracker) {
