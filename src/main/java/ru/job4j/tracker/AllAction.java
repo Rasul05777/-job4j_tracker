@@ -20,3 +20,4 @@ public class AllAction implements UserAction {
         return true;
     }
 }
+
