@@ -6,9 +6,10 @@ public class AllAction implements UserAction {
     AllAction(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
-       return "Show all Items";
+        return "Show all Items";
     }
 
     @Override

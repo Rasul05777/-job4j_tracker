@@ -6,6 +6,7 @@ public class FindIdAction implements UserAction {
     FindIdAction(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "FInd item by id";

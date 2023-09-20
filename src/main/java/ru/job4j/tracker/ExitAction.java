@@ -6,6 +6,7 @@ public class ExitAction implements UserAction {
     ExitAction(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Exit";
