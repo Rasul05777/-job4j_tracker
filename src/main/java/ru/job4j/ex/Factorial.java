@@ -2,7 +2,7 @@ package ru.job4j.ex;
 
 public class Factorial {
     public int calc(int a) {
-        if(a < 0) {
+        if (a < 0) {
             throw new IllegalArgumentException("A could not be less than 0");
         }
         int rsl = 1;
