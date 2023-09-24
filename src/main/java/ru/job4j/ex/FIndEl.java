@@ -8,16 +8,16 @@ public class FIndEl {
                 rsl = index;
                 break;
             }
-            if (rsl == -1) {
-                throw new ElementNotFoundException("Element not found");
-            }
+        }
+        if (rsl == -1) {
+            throw new ElementNotFoundException("Element not found");
         }
         return rsl;
     }
 
     public static void main(String[] args) {
         String[] value = {"list1", "list2", "list3"};
-        String key = "list4";
+        String key = "list5";
         try {
             indexOf(value, key);
         } catch (ElementNotFoundException e) {
