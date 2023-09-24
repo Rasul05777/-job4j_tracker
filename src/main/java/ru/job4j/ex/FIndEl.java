@@ -4,7 +4,7 @@ public class FIndEl {
     public static int indexOf(String[] value, String key) throws ElementNotFoundException {
         int rsl = -1;
         for (int index = 0; index < value.length; index++) {
-            if (key.equals(index)) {
+            if (key.equals(value[index])) {
                 rsl = index;
                 break;
             }
@@ -16,10 +16,9 @@ public class FIndEl {
     }
 
     public static void main(String[] args) {
-        String[] value = {"list1", "list2", "list3"};
-        String key = "list5";
+        String[] array = {"list1", "list2", "list3"};
         try {
-            indexOf(value, key);
+            System.out.println(indexOf(array, "list1"));
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
