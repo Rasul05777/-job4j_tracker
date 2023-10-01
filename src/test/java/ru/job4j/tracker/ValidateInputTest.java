@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ValidateInputTest {
@@ -9,7 +10,7 @@ public class ValidateInputTest {
     public void whenInvalidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"one", "1"}
+                new String[]{"one", "1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
@@ -20,7 +21,7 @@ public class ValidateInputTest {
     public void whenInvalidInputTrue() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1"}
+                new String[]{"1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
@@ -31,18 +32,26 @@ public class ValidateInputTest {
     public void whenInvalidInputMore() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "2", "3", "4", "5"}
+                new String[]{"1", "2", "3", "4", "5"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(1);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(2);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(3);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(4);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(5);
     }
 
     @Test
     public void whenInvalidInputNegativeNumber() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"-1"}
+                new String[]{"-1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
