@@ -39,7 +39,8 @@ public class PasswordValidator {
         String[] passContain = {"qwerty", "12345", "password", "admin", "user"};
         for (String words : passContain) {
             if (password.toLowerCase().contains(words)) {
-                throw new IllegalArgumentException("Password shouldn't contain substrings:" +
+                throw new IllegalArgumentException("Password shouldn't contain substrings:"
+                        +
                         " qwerty, 12345, password, admin, user");
             }
         }
