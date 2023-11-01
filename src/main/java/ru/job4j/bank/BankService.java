@@ -14,11 +14,9 @@ public class BankService {
     }
 
     public void deleteUser(String passport) {
-          User user = findByPassport(passport);
-          users.remove(user);
-        }
-
-
+        User user = findByPassport(passport);
+        users.remove(user);
+    }
 
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
@@ -34,7 +32,7 @@ public class BankService {
 
     public User findByPassport(String passport) {
         for (User client : users.keySet()) {
-            if(client.getPassport().equals(passport)) {
+            if (client.getPassport().equals(passport)) {
                 return client;
             }
         }
@@ -42,22 +40,22 @@ public class BankService {
     }
 
     public Account findByRequisite(String passport, String requisite) {
-      User user = findByPassport(passport);
-       if(user != null) {
-           for (Account account : users.get(user)) {
-               if(account.getRequisite().equals(requisite)) {
-                   return account;
-               }
-           }
-       }
-       return null;
+        User user = findByPassport(passport);
+        if (user != null) {
+            for (Account account : users.get(user)) {
+                if (account.getRequisite().equals(requisite)) {
+                    return account;
+                }
+            }
+        }
+        return null;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         Account srcUser = findByRequisite(srcPassport, srcRequisite);
         Account destUser = findByRequisite(destPassport, destRequisite);
-        if(srcUser != null && destUser != null && srcUser.getBalance() >= amount) {
+        if (srcUser != null && destUser != null && srcUser.getBalance() >= amount) {
             srcUser.setBalance(srcUser.getBalance() - amount);
             destUser.setBalance(destUser.getBalance() + amount);
             return true;
