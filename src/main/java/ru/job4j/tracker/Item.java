@@ -1,9 +1,7 @@
 package ru.job4j.tracker;
 
-import java.security.PublicKey;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Item {
     private int id;
@@ -57,6 +55,7 @@ public class Item {
                 + ", created=" + created.format(FORMATTER)
                 + '}';
     }
+
 }
 
 
