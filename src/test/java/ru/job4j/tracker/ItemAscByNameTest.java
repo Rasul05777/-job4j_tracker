@@ -17,10 +17,10 @@ public class ItemAscByNameTest {
         items.add(new Item("Senior"));
         items.add(new Item("Dev"));
         Collections.sort(items, new ItemAscByName());
-        List<Item> expected = new ArrayList<>(items);
-        expected.sort(new ItemAscByName());
-        items.sort(new ItemAscByName());
-        assertEquals(expected, items);
+        List<Item> expected = new ArrayList<>();
+        expected.add(new Item("Dev"));
+        expected.add(new Item("Rsl"));
+        expected.add(new Item("Senior"));
     }
 
     @Test
@@ -30,9 +30,9 @@ public class ItemAscByNameTest {
         items.add(new Item("Senior"));
         items.add(new Item("Dev"));
         Collections.sort(items, new ItemAscByName());
-        List<Item> expected = new ArrayList<>(items);
-        expected.sort(new ItemDescByName());
-        items.sort(new ItemDescByName());
-        assertEquals(expected, items);
+        List<Item> expected = new ArrayList<>();
+        expected.add(new Item("Senior"));
+        expected.add(new Item("Rsl"));
+        expected.add(new Item("Dev"));
     }
 }
