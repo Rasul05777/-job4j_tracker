@@ -53,8 +53,7 @@ public class AnalyzeByMap {
            averagePeople.add(new Label(pupil.name(), score));
        }
         averagePeople.sort(Comparator.naturalOrder());
-        Label bestSt = averagePeople.get(averagePeople.size() - 1);
-        return bestSt;
+        return averagePeople.get(averagePeople.size() - 1);
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
@@ -69,7 +68,6 @@ public class AnalyzeByMap {
             labels.add(new Label(key, temp.get(key)));
         }
         labels.sort(Comparator.naturalOrder());
-        Label bestSb = labels.get(labels.size() - 1);
-        return bestSb;
+       return labels.get(labels.size() - 1);
     }
 }
