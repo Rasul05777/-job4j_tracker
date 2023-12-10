@@ -10,11 +10,10 @@ public class BankService {
 
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());
-
     }
 
     public void deleteUser(String passport) {
-       users.remove(passport, "");
+        users.remove(passport, "");
     }
 
     public void addAccount(String passport, Account account) {
@@ -28,24 +27,23 @@ public class BankService {
     }
 
     public User findByPassport(String passport) {
-        for (User client : users.keySet()) {
-            if (client.getPassport().equals(passport)) {
-                return client;
-            }
-        }
-        return null;
+            return users.keySet()
+                    .stream()
+                    .filter(s -> s.getPassport().equals(passport))
+                    .findFirst()
+                    .orElse(null);
     }
 
     public Account findByRequisite(String passport, String requisite) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            for (Account account : users.get(user)) {
-                if (account.getRequisite().equals(requisite)) {
-                    return account;
-                }
+            var newPassport = findByPassport(passport);
+            if (newPassport == null) {
+                return null;
             }
-        }
-        return null;
+            return  users.get(newPassport)
+                    .stream()
+                    .filter(s -> s.getRequisite().equals(requisite))
+                    .findFirst()
+                    .orElse(null);
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
